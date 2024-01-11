@@ -1,0 +1,28 @@
+1.) What is javaScript?
+ JavaScript is a programming language that is used fro transforming a static web pages to interactive and dynamic web pages.
+
+
+ 2.)What are data types in JavaScript? What are primitive data types?
+
+ DataTypes-->A data type determines the type of values that can be stored in a variable.
+ let age=24;// by seeing the value of age js determines it type as number.
+
+ Types of data-type
+ a) Primitive (by-value) : Primitive data-type are immutable,
+Numbers,String,Booleans,Undefined,Null
+ b)Non-Primitive (by-reference) : Object, array, Date, RegExp
+
+3.) Difference between primitive data-type and non-primitive data type?
+Primitive Data type-->
+It hold only single value.
+It is immutable in nature(values can't be changed)
+Non primitive data type-->
+It is made-up of primitive data-type.
+It is mutable in nature (values can be modefied)
+
+4.) Array--> An array is used to store a collection of values, such as a list of numbers or a list of names.
+
+5.)Function--> A function is a block of code that performs a specific task and return a value.
+
+6.)Object--> An object is a collection of values and functions
+
