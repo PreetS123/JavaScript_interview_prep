@@ -26,3 +26,41 @@ It is mutable in nature (values can be modefied)
 
 6.)Object--> An object is a collection of values and functions
 
+7.)What is client side and server side?
+
+Client side--> A client side is a device, application, or a software component that "request" and consumes services from a server.
+
+Server side--> A server is a device, computer or software application that provides services, resources, or function to clients.
+
+8.)What are variables?
+Variables are named storage for a data.
+
+9.)Difference between var, let and const?
+
+10.) What are some important string operations in JS?
+ substr()
+ substring()
+ replace()
+ search()
+ toLowerCase()
+ toUpperCase()
+ indexOf()
+ includes()
+ slice()
+ concat()-> let str1="Hello", str2="World"
+  let result= str1.concat(" ",str2);//Hello World
+  concat takes two parameter i.e seperator and second parameter to add.
+ lastIndexOf()
+ charCodeAt()
+ trim()
+ charAt()
+ valueOf()
+ split()
+ toString()
+ match()
+
+ 11.) What is DOM?
+ DOM stand for document object model.
+
+ 12) What are selectors in JS?
+    DOM selector method-> getElementById(), getElementByClassName(), getElementByTagName(), querySelector(), querySelectorAll()
