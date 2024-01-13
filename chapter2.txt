@@ -1,0 +1,51 @@
+1.)What is a loop ? What are types of loop in JS?
+Loops are control structures that allow us to perform a repetaive task as per a given condition.
+There are five types of loop in JS
+a) for loop: for(initialization; condition; iteration){}
+b) while loop: while(condition){}
+c) do-while loop: do{}while(condition);
+d) for in loop: iterates over properties of an object  for(variable in object){};
+e) for-of loop: iterates over values of an iterable object
+2.) What are functions in JS? What are types of function?
+Function are a piece of reusable block of code which are used to perform a specific task or a set of tasks.
+Types of function:
+a) Function declaration: This is a standard way of declaring a function.
+       function add(a,b){
+       return a+b;
+       }
+b) Function expressions:Function assigned to a variable.
+   const sub= function(a,b)=>{
+     return a-b;
+     };
+c) Arrow Function: Arrow function is modified way of writing a function. It is entroduced in ES6. It doesn't support hoisting.
+
+d) Immediately invoked function expression (IIFE): It is Immediately invoked after being declared.
+(function(){
+})();
+e) Anonymous function: Function without a name. They are often used as parameter of another function.
+3.)What are Arrow Function in JS? What is it use?
+
+4.)What are Arrays in JS? How to get, add & remove elements from arrays?
+5.)What are objects in JS?
+Objects are non primitive type of data-type. It consist of key-value pair.
+Objects in js is being used for various purpose:
+a) Representing real world entities
+b) Organising data
+c) Creating dynamic structures
+6.)What is Scope in JavaScript?
+   Accessebilty of any variable, object,methods in a programme is know as its scope.
+7.) What is Hoisting in JavaScript?
+ Hoisting is a behavior in JS when variables and functions are moved to the top of their containing scopes during compilation phase.
+8.)What is Error Handling in JS?
+
+9.)What is JSON?
+ JSON stand for JavaScript Object Notation, it is often used to transmitt data between a server and a web application.
+10.)What is asynchronous programming in JS? What is its use?
+Asynchronous programming in javascript refers to the execution of function or methods without blocking of code. It allow certain operation to perform concurrently or in background without blocking the execution of rest of the programme.
+
+It is used for various purpose:
+a)Handling asynchronous operations such as performing network request , reading wrinting to database and interaction with external api's.
+
+b)User interface interactivity such as handling user input and events and animation and transitions.
+
+c) Improved performance issue by executing multiple task without blocking.
