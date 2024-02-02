@@ -1,0 +1,4 @@
+Three main pillars of writing HTML and CSS.
+1.)Responsive design--> fluid layouts , media query, desktop first vs mobile first, correct units.
+2.)Maintainable and Scalable code--> clean, easy to understand, growth, reusable, classes naming, organized file.
+3.)Web performance-->Less image, compressed image, use of css processor, less http request.
