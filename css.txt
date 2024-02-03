@@ -2,3 +2,16 @@ Three main pillars of writing HTML and CSS.
 1.)Responsive design--> fluid layouts , media query, desktop first vs mobile first, correct units.
 2.)Maintainable and Scalable code--> clean, easy to understand, growth, reusable, classes naming, organized file.
 3.)Web performance-->Less image, compressed image, use of css processor, less http request.
+
+Q) What happens to CSS when we load up a webpage?
+
+When our webpage gets loaded in users machine, then firstly HTML gets loaded up and then it is being parsed. After this parsing the browser stores the parsed HTML in node form that is represented as Document Object Model (DOM).
+Also during this parsing browser load CSS and CSS is also get parsed.
+The parsing of css is more complex than HTML, it involves two steps 
+a)Resolves conflicting CSS declarations (cascade) 
+b)Process final CSS values.
+And then the final CSS is also stored like DOM called as CSS Object MOdel(CSSOM).
+Then both the parsed CSS and HTML then comes to the render tree in order to render the page.
+For website rendering the visual formatting model happens and then the final render of the website take place.
+
+
