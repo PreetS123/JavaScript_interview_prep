@@ -14,4 +14,40 @@ And then the final CSS is also stored like DOM called as CSS Object MOdel(CSSOM)
 Then both the parsed CSS and HTML then comes to the render tree in order to render the page.
 For website rendering the visual formatting model happens and then the final render of the website take place.
 
+How CSS is parsed?
+
+The cascade and specificity ?
+The cascade (The "C" in CSS)--> Process of combining different stylesheets and resolving conflicts between CSS rules and declarations, when more than one rule applies to a certain element.
+Cascade can be applied using by :
+the author (developer)
+user 
+the browser(by user agent)---> a, ul,.. these tag have some default css.
+
+Importance  > Specificity  > Source order
+
+First same importance is checked then same specificity is checked and then last declaration in the code will override all the other declaration and will be applied
+Importance
+User !important declarations
+Author !important declarations
+Author declarations
+User declaration
+Default browser declarations.
+
+Specificity
+Inline styles
+IDs
+Classes, pseudo-classes, attribute
+Elements, pseudo-elements
+
+Key points:
+.)CSS declaration marked with ! important have the highest priority.
+.) But, only use important as a last resource. Its better to use correct specificity-- for more maintainable code!
+.)Inline styles will always have priority over styles in external stylesheets.
+.)A selector that contains 1 ID is more specific than one with 1000 classes;
+.)A selector that contains 1 class is more specific than one with 1000 element;
+.)The universal selector * has no specificity value (0,0,0,0);
+.) Rely more on specificity than on the order of selectors;
+
+.) How CSS is being parsed : How CSS values are processed?
+
 

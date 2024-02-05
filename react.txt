@@ -1,0 +1,71 @@
+Q) What is React JS?
+React is an efficient,flexible, open-source frontend javaScript library created by facebook in 2013. It is used for creating complex and reusable user interface, specially for single page web application. It follows component based approach.
+
+Q) What are features of reactJS?
+Importance features of reactJS are:
+1)Use of VDOM rather than DOM.
+2)It follows unidirectional data-flow.
+3)React uses JSX, a combination of basic HTML and JavaScript.
+4) It follow component based approach.
+
+Q)What are the limitation of reactJS?
+1) The first thing is react is not a fully fledge framework, it is just a js library.
+2)Beginner programmer might face difficulty.
+3)Coding might become difficult using JSX.
+
+What is JSX?
+JSX is just a syntax extension of javaScript.
+
+Can web browser read JSX?
+No, it uses babel which acts as a transpiler.
+
+What is the virtual DOM?
+
+Why we use React instead of other framework?
+1)Easy creation of dynamic application because react takes less code to provide more functionality which is little complex in javaScript.
+2)Improved performance : React uses VDOM which updated only the component that is required rather than rendering whole web application.
+3)Reusable component: React uses component based approach. These component have their own logic and controls and these can be used throughout the application which safes development time.
+4)Unidirectional data-flow: Debugging becomes easier.
+
+Q) What is the difference between ES6 and ES5 ?
+Components and Function
+ES5:
+var MyFunction= React.createClass({
+    render: function(){
+        return(
+            <>
+            <p>Hello world!</p>
+            </>
+        )
+    }
+})
+
+ES6:
+class MyFunction extends React.component {
+    render(){
+        return(
+            <p>Hello ES6</p>
+        )
+    }
+}
+
+exports vs export 
+require vs import:
+ES5: var React= require("react");
+ES6: import React from "react";
+
+What is an event in React?
+An event is an action that a user or an event triggers such as pressing a key, a mouse click.
+With JSX, we pass a function rather than a string in HTML.
+<Button onClick={lightItUp} />
+
+Q)What are synthetic event in React?
+e.preventDefault()--> exapmle of synthetic event.
+SyntheticEvent is a wrapper based on the browser's native events.
+
+Q)Why is there a need for using "key" in reactJS?
+A key is a unique identifier and it is used to identify which item have been updated or deleted.
+It also helps to determine which component needs to be re-rendered instead of rendering all the components.
+
+
+
