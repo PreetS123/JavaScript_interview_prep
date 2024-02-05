@@ -68,4 +68,17 @@ A key is a unique identifier and it is used to identify which item have been upd
 It also helps to determine which component needs to be re-rendered instead of rendering all the components.
 
 
+What are the component in ReactJS?
 
+A component is essentially piece of user interface. It splits the user interface into independent, reusable parts that can be processed independently.
+There are two types of component in ReactJS:
+Functional Components: These types of components have no state of their own and only contains render methods, and called stateless component.
+ function Greeting(props){
+    return <h1>Hello {props.name}</h1>
+ }
+ Class Components: These type of component can hold and manage their own state and have a separate render method to return JSX on the screen.They are called stateful components as they have a state.
+ class Greeting extends React.components{
+    render(){
+        return <h1>Welcome to {this.props.name}</h1>
+    }
+ }
