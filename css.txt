@@ -51,3 +51,56 @@ Key points:
 .) How CSS is being parsed : How CSS values are processed?
 
 
+.)How CSS is being converted from px to rem?
+
+rem takes the relative size i.e it is 0.1x of parent component so we first need to override default size and set a font-size directly to "html".
+
+.)The visual formatting model
+The CSS visual formatting model is an algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, in order to determine the final layout of the page.
+
+.)Box Types: Inline, Block-level and inline-block 
+
+Block-level boxes---> Element formatted visually as blocks.
+100% of parent's width.
+Vertically, one after another.
+Box-model applies as showed.
+
+Inline Boxes--> Content is distributed in lines.
+Occupies only content's space
+No line-breaks
+No heights and widths
+Padding and margins only horizontally(left and right)
+
+Inline-block boxes--> 
+A mix of block and inline.
+Occupies only contents space.
+No line-breaks.
+Box-model applies as showed.
+
+Positioning schemes: Normal flow, absolute position and floats.
+
+Normal flow-->
+Normal flow means that when the page is simply laid out in normal positioning.
+
+Default positioning scheme;
+NOT floated;
+NOT absolutely positioned;
+Elements laid out according to their source order.
+By position:relative is the default positioning.
+
+Floats-->
+Element is removed from the normal flow;
+Text and inline elements will wrap around floated element;
+The container will not adjust its height to the element.
+float:left;
+float:right;
+
+Absolute positioning-->
+Element is removed from the normal flowNo impact on surrounding content or elements.
+We use top, bottom, left and right to offset the element from its relative positioned container.
+position:absolute;position:fixed;
+
+
+Stacking Contexts:
+z-index,transform, filter etc is being handled by stacking contexts.
+They creates new stacking context.
