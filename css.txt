@@ -118,3 +118,6 @@ Mixins: to write reusable pieces of CSS code;
 Functions: similar to mixins, with the difference that they produce a value that can than be used.
 .Extends: to make different selectors inherit declarations that are common to all of them;
 .Control directives: for writing complex code using conditionals and loops
+
+SCSS provide mixin, functions and extend property to write logic in CSS.
+Here is the code pen link: https://codepen.io/PreetS123/pen/abMjYoK
