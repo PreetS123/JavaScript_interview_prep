@@ -14,7 +14,28 @@ Array.prototype.myMap = function (cb) {
   return temp;
 };
 
-let output = arr.myMap((el,i,arr) => {
+let output = arr.myMap((el, i, arr) => {
   return el * 3;
 });
-console.log("myMap",output);
+console.log("myMap", output);
+
+/**
+ * Filter returns those element which satisfies the condition
+ * returns an array of element
+ */
+
+Array.prototype.myFilter = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i, this)) {
+      temp.push(this[i]);
+    }
+  }
+  return temp;
+};
+
+let filterOut = arr.myFilter((el) => {
+  return el % 2;
+});
+
+console.log("filter", filterOut);
