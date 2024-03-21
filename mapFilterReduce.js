@@ -39,3 +39,23 @@ let filterOut = arr.myFilter((el) => {
 });
 
 console.log("filter", filterOut);
+
+/*
+Reduce function custom application
+We need to know that reduce function return accumulator, current value, index and array.
+*/
+
+Array.prototype.myReduce = function (cb, initialValue) {
+  let accumulator = initialValue;
+  for (let i = 0; i < this.length; i++) {
+    accumulator = accumulator ? cb(accumulator, this[i], i, this) : this[i];
+  }
+  return accumulator;
+};
+
+
+let reduceOut = arr.myReduce((acc,cv)=>{
+    return acc+cv;
+},0) 
+
+console.log("reduceOut",reduceOut);
