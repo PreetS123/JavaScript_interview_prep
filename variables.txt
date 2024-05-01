@@ -1,0 +1,21 @@
+variable shadowing --> When we declare a variable using var or let and try to decalre the same variable
+ in a block inside them then variable shadowing take place.
+But when we declare a variable using let and try to shadow it using var then illegal shadowing take place.
+
+ Eg:  
+      function variableShadowing(){
+        let a=7;
+        
+
+        if(true){
+            let a=8;
+            console.log(a);
+            
+        }
+        if(false{
+            var a=10;
+            console.log(a);// here we get syntax error a is already being declared.
+        })
+      }
+
+      output--> a=8
