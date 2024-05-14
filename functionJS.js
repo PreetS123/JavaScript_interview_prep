@@ -10,3 +10,23 @@ function printSquare(a){
 }
 
 printSquare(square(9)); //output-->81
+
+
+
+// What is IFIE?
+
+// Imidiatly invoked function expression
+
+(function(x){
+    console.log(x*x);
+})(5)
+
+
+// Dummy question on scope of a function
+
+var x=4;
+function abc(){
+    console.log("inside",x);// output--> undefined
+    var x=9;
+}
+abc()
