@@ -9,7 +9,7 @@ function printSquare(a){
     console.log("Square is"+" "+ a);
 }
 
-printSquare(square(9)); //output-->81
+// printSquare(square(9)); //output-->81
 
 
 
@@ -29,4 +29,22 @@ function abc(){
     console.log("inside",x);// output--> undefined
     var x=9;
 }
-abc()
+// abc()
+
+// What is Callback function?
+// A function that is being called as an argument to another function is called callback function
+//   For instance-->
+  
+    document.addEventListener("click",function(){
+        console.log("I'm a callback function");
+    })
+
+    setTimeout(() => {
+       console.log("I uses callback function"); 
+    }, 100);
+
+
+    // Difference between arrow function and normal function
+
+    // Arrow function --> 1) It is not hoisted. 2) Implicit return keyword. 3) Doesn't have this keyword.
+    // Normal function --> 1) It uses this keyword.
