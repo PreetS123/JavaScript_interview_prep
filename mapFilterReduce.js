@@ -55,3 +55,38 @@ Array.prototype.myReduceMethod = function (cb, initialValue) {
 let sum = nums.myReduceMethod((acc, cv, i, arr) => acc + cv, 0);
 
 console.log("even", sum);
+
+/// Practice questions
+let students = [
+  { name: "Preeti", rollNo: 31, marks: 80 },
+  { name: "Prity", rollNo: 4, marks: 55 },
+  { name: "Priti", rollNo: 20, marks: 95 },
+  { name: "Preety", rollNo: 55, marks: 45 },
+];
+
+// Return the name of student in capital letters
+
+let caps = students.myMapMethod((ele) => ele.name.toUpperCase());
+// console.log("caps", caps);
+
+// return who got  marks more than 60
+
+let more60 = students.myFilterMethod((ele) =>ele.marks>60 && ele.rollNo >15);
+// console.log("more than 60", more60);
+
+
+// sum of all marks
+let allSum= students.reduce((acc,cv)=>acc+cv.marks,0);
+// console.log("all",allSum);
+
+
+// return names which are more than 60
+let names60= students.myFilterMethod((ele)=>ele.marks>60).myMapMethod((ele)=>ele.name);
+// console.log("name60",names60);
+
+// provide 20 as grace marks to student who have marks less than 60 and then find the sum of student having marks more than 60
+ let grace60=students.map((ele)=>{
+  if(ele.marks<60) ele.marks+=20;
+  return ele;
+ }).filter((el)=>el.marks>60).reduce((acc,cv)=>acc+cv.marks,0);
+ console.log("grace 60",grace60);
