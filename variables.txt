@@ -19,3 +19,36 @@ But when we declare a variable using let and try to shadow it using var then ill
       }
 
       output--> a=8
+
+
+
+      Hoisting: 
+         In javaScript, hoisting is a default behaviour where variables and function 
+         are moved to the top of their scope during compilation phase.
+
+         However, only declarations are hoisted, not the initialization or assignment.
+         example:-  
+         console.log(a);// o/p--> undefined
+         var a= 9;
+
+
+    Temoral Dead Zone (TDZ):
+         TDZ is a specific behaviour of javaScript that is related to valriable declaration using 
+         Let and Const. 
+         It refers to the period between the start of athe block scope and the actual declaration of a variable.
+         If we try to access the variable during the temporal dead zone then it gives us reference error.
+
+
+
+  Difference between Var, let anfd const.
+  Var--> Variable declared using var keyboard can be accessed before declaration.
+         It support hoisting and we can access the variable before declaration.
+         It has global scope and we can access it in window object.
+  Let --> It doesn't support hoisting. 
+          It is block scope.
+          Accessing a variable before its declaration gives refference error. 
+  Const --> It is similar to let but we need to initialize the variable during declaration elese it 
+             will throw error.
+
+             
+         
