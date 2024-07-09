@@ -46,5 +46,8 @@ function abc(){
 
     // Difference between arrow function and normal function
 
-    // Arrow function --> 1) It is not hoisted. 2) Implicit return keyword. 3) Doesn't have this keyword.
+    // Arrow function --> 1) It is not hoisted. 2) Implicit return keyword. 3) Doesn't have this keyword. 4) We can't use arguments in arrow function.
     // Normal function --> 1) It uses this keyword.
+
+    // Implicit Return keyword 
+      const sq= (num)=> num*num;
