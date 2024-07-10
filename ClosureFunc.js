@@ -96,3 +96,22 @@ function a(){
 }
 
 // a() // 0 1 2
+
+/** Use closure to create a private counter */
+
+
+function counter(){
+  var _counter=0;
+ function add(inc){
+   _counter+=inc;
+  }
+
+  function retrive(){
+    return "Counter = " + _counter;
+  }
+  return { add , retrive};
+}
+
+let c= counter();
+c.add(8);
+console.log(c.retrive());
