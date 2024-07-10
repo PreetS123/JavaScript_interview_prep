@@ -57,9 +57,9 @@ function find(index) {
     a[i] = i * i;
   }
   // here by returning the function time is reduced but if we directly log the value then it will take more time
-  return function (index){
-  console.log(a[index]);
-  }
+  return function (index) {
+    console.log(a[index]);
+  };
 }
 
 // const closure= find();
@@ -84,35 +84,34 @@ function a(){
 a();
 */
 
-function a(){
-    for(var i=0 ; i< 3; i++){
-         function inner(i){
-           setTimeout(function(){
-            console.log(i);
-           },i*1000)
-        }
-        inner(i);
+function a() {
+  for (var i = 0; i < 3; i++) {
+    function inner(i) {
+      setTimeout(function () {
+        console.log(i);
+      }, i * 1000);
     }
+    inner(i);
+  }
 }
 
 // a() // 0 1 2
 
 /** Use closure to create a private counter */
 
-
-function counter(){
-  var _counter=0;
- function add(inc){
-   _counter+=inc;
+function counter() {
+  var _counter = 0;
+  function add(inc) {
+    _counter += inc;
   }
 
-  function retrive(){
+  function retrive() {
     return "Counter = " + _counter;
   }
-  return { add , retrive};
+  return { add, retrive };
 }
 
-let c= counter();
+let c = counter();
 c.add(8);
 // console.log(c.retrive());
 
@@ -122,18 +121,84 @@ c.add(8);
  * and functions, exposing only a public interface.
  */
 
-let Module =( function (){
+let Module = (function () {
   // thse functions are not returnable
-function privateMethod(){
- console.log("private");
-}
-return {
-  publicMethod: function (){
-    /// we can call privateMethod();
-    console.log("public");
-
+  function privateMethod() {
+    console.log("private");
   }
-}
+  return {
+    publicMethod: function () {
+      /// we can call privateMethod();
+      console.log("public");
+    },
+  };
 })();
 // Module.publicMethod();
 // Module.privateMethod(); // this can't be accesible outside the Module
+
+/**
+ * Make the function called only once using closure
+ * let view;
+function likeTheView(){
+  view="Mountain";
+  console.log(view);
+}   // this should be called once although we call multiple times.
+ */
+
+let view;
+function likeTheView() {
+  let called = 0;
+  return function () {
+    if (called > 0) {
+      console.log("Already viewed");
+    } else {
+      view = "Mountain";
+      console.log(view);
+      called++;
+    }
+  };
+}
+
+let isViewed = likeTheView();
+// isViewed();
+// isViewed(); // Already viewed
+// isViewed(); // already viewed
+
+/**
+ * Make more genric code for it.
+ * Once Polyfill
+ */
+
+function once(func, context) {
+  let ran;
+  return function () {
+    if (func) {
+      ran = func.apply(context || this, arguments);
+      func = null;
+    }
+    return ran;
+  };
+}
+
+const hello= once(()=> console.log("hello"));
+
+// hello();
+// hello();
+// hello();
+
+
+/**
+ * What is memoize?
+ */
+
+/**
+ * Closure in javaScript?
+ * Difference between Closure and Scope?
+ */
+
+/**
+ * Closure--> Closure refers to a function's ability to retain access to variable from its lexical scope 
+ * even after that scope has closed.
+ * Scope --> It refer to the visibility and accessibility of variables within a specific context,
+ *        such as global, function or block scope.
+ */
