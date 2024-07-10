@@ -114,4 +114,26 @@ function counter(){
 
 let c= counter();
 c.add(8);
-console.log(c.retrive());
+// console.log(c.retrive());
+
+/**
+ * What is Module Pattern ?
+ * The module pattern uses an IIFE to encapsulate private variables
+ * and functions, exposing only a public interface.
+ */
+
+let Module =( function (){
+  // thse functions are not returnable
+function privateMethod(){
+ console.log("private");
+}
+return {
+  publicMethod: function (){
+    /// we can call privateMethod();
+    console.log("public");
+
+  }
+}
+})();
+// Module.publicMethod();
+// Module.privateMethod(); // this can't be accesible outside the Module
