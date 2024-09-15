@@ -29,13 +29,24 @@ let emp2={
     lname:"Jhadhav"
 }
 //call is being used here
-callMethod.call(emp1,"Hello","How are you?");
+// callMethod.call(emp1,"Hello","How are you?");
 // apply is being used here
-callMethod.apply(emp2,["Hello","How are you?"]);
+// callMethod.apply(emp2,["Hello","How are you?"]);
 
 // bind function creates an instance of the function and then we can pass as many argument we want.
-let myBind=callMethod.bind(emp1);
-myBind("Hi","How are you?");
+// let myBind=callMethod.bind(emp1);
+// myBind("Hi","How are you?");
+
+Function.prototype.myBind=function(...args){
+   let obj=this;
+   let params= args.slice(1);
+   return function(...args1){
+       obj.apply(args[0],[...params,...args1]);
+   }
+}
+
+let greetings= callMethod.myBind(emp1);
+greetings("Hi","How are u?");
 
 /**
  * Prototype in javaScript
@@ -49,4 +60,4 @@ let grandfather={
 
 let father= Object.create(grandfather);
 father.eyes="Yellow";
-console.log(father);
+// console.log(father);
