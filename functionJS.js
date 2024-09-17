@@ -12,6 +12,15 @@ function printSquare(a){
 // printSquare(square(9)); //output-->81
 
 
+/**
+ * Function expression --> function stored in a variable
+ */
+
+let b= function(){
+    console.log("b called");
+}
+
+
 
 // What is IFIE?
 
