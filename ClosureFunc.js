@@ -3,6 +3,54 @@
  *  Or in simple words a function called inside another function is called closures.
  */
 
+/** 
+ * What is a closure in js and why it is useful?
+ * Explain how closures can be used to create private variables in js.
+ * 
+*/
+function outerMost(){
+  let c=0;
+  return function(){
+    c++;
+    console.log(c);
+  }
+}
+let cc=outerMost();
+// cc();
+// cc();
+// op--> 1 
+     //  2
+
+    /*  create a function that remembers its argument and adds it to a new argument passed later? */
+    function remArg(p1){
+      return function rem(p2){
+        console.log(p1+p2);
+      }
+    }
+    // let out=remArg(5);
+    // out(10)
+    /**
+     * Fix this loop
+     * for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
+}
+     */
+    for (var i = 0; i < 5; i++) {
+      function close(x){
+      setTimeout(function() {
+          console.log(x);
+      }, 1000);
+    }
+    close(i);
+  }
+
+  /**
+   * Explain how closures can help in maintaining the state of a function between invocations.
+   */
+
+
 function outerFunc(x) {
   return function middleFun(y) {
     return function innerFunc(z) {
