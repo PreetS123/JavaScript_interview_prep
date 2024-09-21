@@ -1,6 +1,14 @@
 // What are First class function in JavaScript?
 // A function that can be used as a variable or as a parameter for another function is known as FIRST CLASS FUNCTION.
 
+/* Why functions are called as first class functions
+It can be assigned to a variables
+Passed as an arguments
+Returned from functions.
+Becuase of these flexibilities functions are powerful for writing modular and flexible code.
+
+*/ 
+
 function square(x){
     return x*x
 }
